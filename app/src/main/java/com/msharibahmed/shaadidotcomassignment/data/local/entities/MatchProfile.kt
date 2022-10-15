@@ -3,9 +3,10 @@ package com.msharibahmed.shaadidotcomassignment.data.local.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.msharibahmed.shaadidotcomassignment.utils.AppConstants.DATABASE_TABLE_NAME
 import com.msharibahmed.shaadidotcomassignment.utils.Status
 
-@Entity(tableName = "match_data_table")
+@Entity(tableName = DATABASE_TABLE_NAME)
 data class MatchProfile(
     @PrimaryKey
     @ColumnInfo(name = "uuid")
