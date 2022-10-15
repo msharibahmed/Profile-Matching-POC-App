@@ -1,7 +1,8 @@
-package com.msharibahmed.shaadidotcomassignment
+package com.msharibahmed.shaadidotcomassignment.presentation.ui.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.msharibahmed.shaadidotcomassignment.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

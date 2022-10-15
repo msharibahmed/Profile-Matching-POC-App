@@ -1,0 +1,3 @@
+package com.msharibahmed.shaadidotcomassignment.utils.events
+
+sealed interface ResponseState
