@@ -5,7 +5,7 @@ import com.msharibahmed.shaadidotcomassignment.data.remote.model.MatchResponseMo
 import kotlinx.coroutines.flow.Flow
 import retrofit2.Response
 
-interface IMatchRepository {
+interface MatchRepository {
     fun getMatchProfilesFromDb(): Flow<List<MatchProfile>> //local data
 
     suspend fun getMatchesFromRemote(): Response<MatchResponseModel> //remote response data

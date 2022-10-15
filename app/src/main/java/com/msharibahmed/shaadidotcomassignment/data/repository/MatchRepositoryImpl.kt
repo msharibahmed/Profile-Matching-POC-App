@@ -11,7 +11,7 @@ import javax.inject.Inject
 class MatchRepositoryImpl @Inject constructor(
     private val apiService: IApiService,
     private val matchDao: MatchDao
-) : IMatchRepository {
+) : MatchRepository {
     override fun getMatchProfilesFromDb(): Flow<List<MatchProfile>> = matchDao.getAll()
 
     override suspend fun getMatchesFromRemote(): Response<MatchResponseModel> =
