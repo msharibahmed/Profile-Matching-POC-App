@@ -5,7 +5,7 @@ import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import com.msharibahmed.shaadidotcomassignment.data.local.entities.MatchProfile
-import com.msharibahmed.shaadidotcomassignment.data.local.entities.Status
+import com.msharibahmed.shaadidotcomassignment.utils.Status
 import kotlinx.coroutines.flow.Flow
 
 @Dao
