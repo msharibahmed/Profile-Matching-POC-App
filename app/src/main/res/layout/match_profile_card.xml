@@ -1,130 +1,134 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:elevation="5dp"
-    app:cardCornerRadius="8dp"
-    android:layout_margin="16dp">
+<layout>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-
+    <com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="8dp">
+        android:layout_margin="16dp"
+        android:elevation="5dp"
+        app:cardCornerRadius="8dp">
 
-        <androidx.cardview.widget.CardView
-            android:id="@+id/cvProfileHolder"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:cardCornerRadius="100dp"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
+        <androidx.constraintlayout.widget.ConstraintLayout
 
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/ivProfile"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                tools:srcCompat="@tools:sample/avatars" />
-        </androidx.cardview.widget.CardView>
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@id/cvProfileHolder"
-            app:layout_constraintStart_toStartOf="@id/cvProfileHolder"
-            app:layout_constraintTop_toBottomOf="@id/cvProfileHolder"
-            tools:text="First Last Name" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvLocation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@id/tvName"
-            app:layout_constraintStart_toStartOf="@id/tvName"
-            app:layout_constraintTop_toBottomOf="@id/tvName"
-            tools:text="Uttar Pradesh, India" />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/tvAge"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            app:layout_constraintEnd_toEndOf="@id/tvLocation"
-            app:layout_constraintStart_toStartOf="@id/tvLocation"
-            app:layout_constraintTop_toBottomOf="@id/tvLocation"
-            tools:text="36 years old" />
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/btnDecline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_decline" />
-
-
-        <TextView
-            android:id="@+id/tvDecline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Decline"
-            app:layout_constraintLeft_toLeftOf="@+id/btnDecline"
-            app:layout_constraintRight_toRightOf="@+id/btnDecline"
-            app:layout_constraintTop_toBottomOf="@+id/btnDecline" />
-
-        <ImageView
-            android:id="@+id/btnAccept"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/ic_accept" />
-
-
-        <TextView
-            android:id="@+id/tvAccept"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="Accept"
-            app:layout_constraintLeft_toLeftOf="@+id/btnAccept"
-            app:layout_constraintRight_toRightOf="@+id/btnAccept"
-            app:layout_constraintTop_toBottomOf="@+id/btnAccept" />
-
-        <androidx.constraintlayout.helper.widget.Flow
-            android:id="@+id/flow1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginVertical="10dp"
-            android:orientation="horizontal"
-            app:constraint_referenced_ids="btnDecline,btnAccept"
-            app:flow_wrapMode="aligned"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvAge" />
+            android:layout_margin="8dp">
 
-        <androidx.constraintlayout.widget.Group
-            android:id="@+id/groupSelection"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:visibility="visible"
-            app:constraint_referenced_ids="btnAccept,btnDecline,tvAccept,tvDecline" />
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cvProfileHolder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="5"
+                app:cardCornerRadius="100dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
 
-        <TextView
-            android:id="@+id/tvMessage"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:paddingHorizontal="8dp"
-            android:textSize="20sp"
-            android:visibility="gone"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvAge"
-            tools:text="match status message" />
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/ivProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    tools:srcCompat="@tools:sample/avatars" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@id/cvProfileHolder"
+                app:layout_constraintStart_toStartOf="@id/cvProfileHolder"
+                app:layout_constraintTop_toBottomOf="@id/cvProfileHolder"
+                tools:text="First Last Name" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@id/tvName"
+                app:layout_constraintStart_toStartOf="@id/tvName"
+                app:layout_constraintTop_toBottomOf="@id/tvName"
+                tools:text="Uttar Pradesh, India" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/tvAge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="@id/tvLocation"
+                app:layout_constraintStart_toStartOf="@id/tvLocation"
+                app:layout_constraintTop_toBottomOf="@id/tvLocation"
+                tools:text="36 years old" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/btnDecline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_decline" />
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
-</com.google.android.material.card.MaterialCardView>
+            <TextView
+                android:id="@+id/tvDecline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/reject"
+                app:layout_constraintLeft_toLeftOf="@+id/btnDecline"
+                app:layout_constraintRight_toRightOf="@+id/btnDecline"
+                app:layout_constraintTop_toBottomOf="@+id/btnDecline" />
+
+            <ImageView
+                android:id="@+id/btnAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_accept" />
+
+
+            <TextView
+                android:id="@+id/tvAccept"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="@string/accept"
+                app:layout_constraintLeft_toLeftOf="@+id/btnAccept"
+                app:layout_constraintRight_toRightOf="@+id/btnAccept"
+                app:layout_constraintTop_toBottomOf="@+id/btnAccept" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="horizontal"
+                app:constraint_referenced_ids="btnDecline,btnAccept"
+                app:flow_wrapMode="aligned"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAge" />
+
+            <androidx.constraintlayout.widget.Group
+                android:id="@+id/groupSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                app:constraint_referenced_ids="btnAccept,btnDecline,tvAccept,tvDecline" />
+
+            <TextView
+                android:id="@+id/tvMessage"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="8dp"
+                android:textSize="20sp"
+                android:visibility="gone"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvAge"
+                tools:text="match status message" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</layout>
