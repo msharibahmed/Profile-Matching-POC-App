@@ -3,6 +3,7 @@ package com.msharibahmed.shaadidotcomassignment.data.local.entities
 import androidx.room.ColumnInfo
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.msharibahmed.shaadidotcomassignment.utils.Status
 
 @Entity(tableName = "match_data_table")
 data class MatchProfile(
@@ -19,17 +20,9 @@ data class MatchProfile(
     var age: Int?, // match->age: 43
     @ColumnInfo(name = "email")
     var email: String?, // match->email: moon.delsing@example.com
-    @ColumnInfo(name = "city")
-    var city: String?, // match->city: Erp
-    @ColumnInfo(name = "state")
-    var state: String?, // match->state: Utrecht
     @ColumnInfo(name = "country")
     var country: String?, // match->country: Netherlands
     @ColumnInfo(name = "status")
     var status: Status = Status.PENDING, // match->status: Pending(default)
 )
 
-
-enum class Status {
-    PENDING, ACCEPTED, REJECTED
-}
