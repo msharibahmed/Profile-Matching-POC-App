@@ -10,7 +10,7 @@ import com.msharibahmed.shaadidotcomassignment.utils.Status
 import kotlinx.coroutines.flow.Flow
 
 @Dao
-interface IMatchDao {
+interface MatchDao {
     @Query("SELECT * FROM $DATABASE_TABLE_NAME")
     fun getAll(): Flow<List<MatchProfile>>
 
