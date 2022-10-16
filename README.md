@@ -8,7 +8,7 @@
 
 - Thoughtful UI✅
 
-- Kotlin✅ || Live Data ✅ || Flow ✅ || Architecture: MVVM✅ || Dependency Injection: Dagger- Hilt
+- Kotlin✅ || Coroutines || Live Data ✅ || Flow ✅ || Architecture: MVVM✅ || Dependency Injection: Dagger- Hilt 
 - Retrofit2✅
 - Database: Room for Caching
 
