@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Shaadi[dot]com Assignment</string>
+    <string name="app_name">Shaadi.com</string>
     <string name="match_rejected_message">Match Rejected!</string>
     <string name="match_accepted_message">Match Accepted!</string>
     <string name="accept">Accept</string>

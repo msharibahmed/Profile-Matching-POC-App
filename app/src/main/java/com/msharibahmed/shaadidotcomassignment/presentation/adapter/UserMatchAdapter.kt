@@ -1,5 +1,6 @@
 package com.msharibahmed.shaadidotcomassignment.presentation.adapter
 
+import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -51,13 +52,30 @@ class UserMatchAdapter @Inject constructor(private val glide: RequestManager) :
             binding.apply {
                 glide.load(profile.imageUrl).into(ivProfile)
                 "${profile.firstName} ${profile.lastName}".also { tvName.text = it }
-                tvLocation.text = profile.country
+                "${profile.city} , ${profile.country}".also { tvLocation.text = it }
                 "${profile.age} years old".also { tvAge.text = it }
-
+                addGenderIcon(profile.gender, binding)
                 uiBasedOnStatusSelection(profile, binding)
                 onButtonAccept(profile, binding)
                 onButtonReject(profile, binding)
             }
+        }
+
+        private fun addGenderIcon(
+            gender: String? = "male",
+            binding: MatchProfileCardBinding
+        ) {
+            binding.tvName.apply {
+                when (gender) {
+                    "female" ->
+                        setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_female, 0, 0, 0);
+
+                    else -> setCompoundDrawablesWithIntrinsicBounds(R.drawable.ic_male, 0, 0, 0);
+
+
+                }
+            }
+
         }
 
         private fun uiBasedOnStatusSelection(
@@ -73,15 +91,19 @@ class UserMatchAdapter @Inject constructor(private val glide: RequestManager) :
                     }
                     Status.ACCEPTED -> {
                         groupSelection.visibility = View.GONE
-                        tvMessage.visibility = View.VISIBLE
-
-                        tvMessage.text = context.getString(R.string.match_accepted_message)
+                        tvMessage.apply {
+                            visibility = View.VISIBLE
+                            setTextColor(Color.parseColor("#16AA04"))
+                            text = context.getString(R.string.match_accepted_message)
+                        }
                     }
                     Status.REJECTED -> {
                         groupSelection.visibility = View.GONE
-                        tvMessage.visibility = View.VISIBLE
-
-                        tvMessage.text = context.getString(R.string.match_rejected_message)
+                        tvMessage.apply {
+                            visibility = View.VISIBLE
+                            setTextColor(Color.RED)
+                            text = context.getString(R.string.match_rejected_message)
+                        }
                     }
                 }
             }

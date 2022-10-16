@@ -19,10 +19,12 @@ data class MatchProfile(
     var imageUrl: String?, // match->profile_url-> https://randomuser.me/api/portraits/women/63.jpg
     @ColumnInfo(name = "age")
     var age: Int?, // match->age: 43
-    @ColumnInfo(name = "email")
-    var email: String?, // match->email: moon.delsing@example.com
+    @ColumnInfo(name = "gender")
+    var gender: String?, //match->gender
     @ColumnInfo(name = "country")
-    var country: String?, // match->country: Netherlands
+    var country: String?, // match->country: India
+    @ColumnInfo(name = "city")
+    var city: String?, // match->country: Lucknow
     @ColumnInfo(name = "status")
     var status: Status = Status.PENDING, // match->status: Pending(default)
 )

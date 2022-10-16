@@ -79,7 +79,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun populateRecyclerView(matchProfiles: List<MatchProfile>) {
-        Log.d("profiles length", matchProfiles.size.toString())
+        //Log.d("profiles length", matchProfiles.size.toString())
         if (matchProfiles.isNotEmpty()) rvAdapter.submitList(matchProfiles)
     }
 

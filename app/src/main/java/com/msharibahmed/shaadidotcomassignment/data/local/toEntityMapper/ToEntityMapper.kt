@@ -17,7 +17,8 @@ class ToEntityMapper @Inject constructor() {
                     lastName = it.name.last,
                     imageUrl = it.picture.large,
                     age = it.dob.age,
-                    email = it.email,
+                    gender = it.gender,
+                    city = it.location.city,
                     country = it.location.country
                 )
             }
