@@ -27,8 +27,22 @@
  cd your-project/
  run App
 ```
-<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/loading.jpeg" alt="Logo of the project" align="left" width="410" height="900">
-<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/screen.jpeg" alt="Logo of the project" align="right" width="410" height="900">
-<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/match_accepted.jpeg" alt="Logo of the project" align="left" width="410" height="900">
-<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/match_rejected.jpeg" alt="Logo of the project" align="right" width="410" height="900">
-<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/no_internet_connection.jpeg" alt="Logo of the project" align="right" width="410" height="900">
+#### App Screenshots
+
+<table>
+  <tr>
+    <td>Loading State</td>
+     <td>Full Screen</td>
+     <td>Match Accepted</td>
+     <td>Match Rejected</td>
+     <td>No Internet Connection State</td>
+  </tr>
+  <tr>
+    <td><img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/loading.jpeg" width=270 height=480></td>
+    <td><img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/screen.jpeg" width=270 height=480></td>
+    <td><img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/match_accepted.jpeg" width=270 height=480></td>
+    <td><img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/match_rejected.jpeg" width=270 height=480></td>
+    <td><img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/no_internet_connection.jpeg" width=270 height=480></td>
+
+  </tr>
+ </table>
