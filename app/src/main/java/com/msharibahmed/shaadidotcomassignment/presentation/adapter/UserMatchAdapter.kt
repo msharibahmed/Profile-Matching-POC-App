@@ -48,14 +48,24 @@ class UserMatchAdapter @Inject constructor(private val glide: RequestManager) :
         RecyclerView.ViewHolder(binding.root) {
 
         fun bind(profile: MatchProfile) {
-            val context = binding.root.context
-
             binding.apply {
                 glide.load(profile.imageUrl).into(ivProfile)
                 "${profile.firstName} ${profile.lastName}".also { tvName.text = it }
                 tvLocation.text = profile.country
                 "${profile.age} years old".also { tvAge.text = it }
 
+                uiBasedOnStatusSelection(profile, binding)
+                onButtonAccept(profile, binding)
+                onButtonReject(profile, binding)
+            }
+        }
+
+        private fun uiBasedOnStatusSelection(
+            profile: MatchProfile,
+            binding: MatchProfileCardBinding
+        ) {
+            binding.apply {
+                val context = binding.root.context
                 when (profile.status) {
                     Status.PENDING -> {
                         groupSelection.visibility = View.VISIBLE
@@ -74,23 +84,31 @@ class UserMatchAdapter @Inject constructor(private val glide: RequestManager) :
                         tvMessage.text = context.getString(R.string.match_rejected_message)
                     }
                 }
+            }
+        }
 
+        private fun onButtonAccept(profile: MatchProfile, binding: MatchProfileCardBinding) {
+
+            binding.apply {
+                val context = binding.root.context
                 btnAccept.setOnClickListener {
                     changeProfileStatusListener?.invoke(profile, Status.ACCEPTED)
                     tvMessage.text = context.getString(R.string.match_accepted_message)
                     notifyItemChanged(position)
                 }
+            }
+        }
 
+        private fun onButtonReject(profile: MatchProfile, binding: MatchProfileCardBinding) {
+
+            binding.apply {
+                val context = binding.root.context
                 btnDecline.setOnClickListener {
                     changeProfileStatusListener?.invoke(profile, Status.REJECTED)
                     tvMessage.text = context.getString(R.string.match_rejected_message)
                     notifyItemChanged(position)
                 }
-
-
             }
-
-
         }
 
     }
