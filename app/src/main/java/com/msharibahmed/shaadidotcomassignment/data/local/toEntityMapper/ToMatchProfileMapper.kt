@@ -2,8 +2,9 @@ package com.msharibahmed.shaadidotcomassignment.data.local.toEntityMapper
 
 import com.msharibahmed.shaadidotcomassignment.data.local.entities.MatchProfile
 import com.msharibahmed.shaadidotcomassignment.data.remote.model.MatchResponseModel
+import javax.inject.Inject
 
-object ToMatchProfileMapper {
+class ToEntityMapper @Inject constructor() {
     fun matchRemoteResponseToEntityMapper(matchNetworkResponse: MatchResponseModel?): List<MatchProfile> {
 
         var matchProfiles: List<MatchProfile>? = null

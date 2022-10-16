@@ -1,7 +1,9 @@
 package com.msharibahmed.shaadidotcomassignment.di
 
-import com.msharibahmed.shaadidotcomassignment.data.repository.MatchRepository
-import com.msharibahmed.shaadidotcomassignment.data.repository.MatchRepositoryImpl
+import com.msharibahmed.shaadidotcomassignment.data.local.localMatchRepository.LocalMatchRepository
+import com.msharibahmed.shaadidotcomassignment.data.local.localMatchRepository.LocalMatchRepositoryImpl
+import com.msharibahmed.shaadidotcomassignment.data.remote.remoteMatchRepository.RemoteMatchRepository
+import com.msharibahmed.shaadidotcomassignment.data.remote.remoteMatchRepository.RemoteMatchRepositoryImpl
 import dagger.Binds
 import dagger.Module
 import dagger.hilt.InstallIn
@@ -11,5 +13,8 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 interface RepositoryModule {
     @Binds
-    fun bindsMatchRepository(matchRepository: MatchRepositoryImpl): MatchRepository
+    fun bindsRemoteMatchRepository(remoteMatchRepository: RemoteMatchRepositoryImpl): RemoteMatchRepository
+
+    @Binds
+    fun bindsLocalMatchRepository(localMatchRepository: LocalMatchRepositoryImpl): LocalMatchRepository
 }
