@@ -27,8 +27,8 @@
  cd your-project/
  run App
 ```
-<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/loading.jpeg" alt="Logo of the project" align="left" width="480" height="1200">
-<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/screen.jpeg" alt="Logo of the project" align="right" width="480" height="1200">
-<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/match_accepted.jpeg" alt="Logo of the project" align="left" width="480" height="1200">
-<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/match_rejected.jpeg" alt="Logo of the project" align="right" width="480" height="1200">
+<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/loading.jpeg" alt="Logo of the project" align="left" width="480" height="800">
+<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/screen.jpeg" alt="Logo of the project" align="right" width="480" height="800">
+<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/match_accepted.jpeg" alt="Logo of the project" align="left" width="480" height="800">
+<img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/match_rejected.jpeg" alt="Logo of the project" align="right" width="480" height="800">
 <img src="https://github.com/msharibahmed/shaadi.com_assignment/blob/main/no_internet_connection.jpeg" alt="Logo of the project" align="right" width="480" height="1200">
