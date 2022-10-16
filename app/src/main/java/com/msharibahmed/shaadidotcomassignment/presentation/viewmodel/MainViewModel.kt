@@ -17,8 +17,7 @@ class MainViewModel
 @Inject
 constructor(
     private val matchRepository: MatchRepository,
-    private val coroutineDispatcher: CoroutineDispatcher,
-    private val savedStateHandle: SavedStateHandle
+    private val coroutineDispatcher: CoroutineDispatcher
 ) : ViewModel(), LifecycleObserver {
 
     private val _responseState: MutableLiveData<ResponseState<List<MatchProfile>>> =
